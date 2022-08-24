@@ -52,7 +52,7 @@ class Schedule extends StatelessWidget {
                 DateTime.now(),
                 initialSelectedDate: DateTime.now(),
                 dateTextStyle: TextStyle(
-                  fontSize: 20.0,
+                  fontSize: 25.0,
                 ),
                 selectionColor: Colors.indigo,
                 width: 50.0,
