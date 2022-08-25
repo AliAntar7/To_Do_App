@@ -81,6 +81,7 @@ class AppCubit extends Cubit<AppStates>
     compTasks = [];
     unCompTasks = [];
     favTasks = [];
+    schedule = [];
 
     database.rawQuery('SELECT * FROM tasks').then((value)
     {

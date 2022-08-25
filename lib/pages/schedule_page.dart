@@ -15,6 +15,7 @@ class Schedule extends StatelessWidget {
     return BlocConsumer<AppCubit , AppStates>(
       listener: (BuildContext context,AppStates state) {},
       builder: (BuildContext context,AppStates state) {
+        AppCubit cubit = AppCubit.get(context);
         List<Map> tasks = AppCubit.get(context).schedule;
         return Scaffold(
           appBar: AppBar(
@@ -48,15 +49,14 @@ class Schedule extends StatelessWidget {
                 height: 20,
               ),
               DatePicker(
-
                 DateTime.now(),
                 initialSelectedDate: DateTime.now(),
                 dateTextStyle: TextStyle(
-                  fontSize: 25.0,
+                  fontSize: 20.0,
                 ),
                 selectionColor: Colors.indigo,
                 width: 50.0,
-                height: 75.0,
+                height: 78.0,
                 selectedTextColor: Colors.white,
                 onDateChange: (date) {
                   AppCubit.get(context).updateTIMELINE(date);
